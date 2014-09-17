@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<!--[if !IE]> <!-->    <html class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>QuickModal Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="demo.css" rel="stylesheet" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="quickModal.css" rel="stylesheet" />
+</head>
+
+<body>
+<!-- Info about the modal: uses demo.css -->
+	<header>
+		<h1>QuickModal: Lightweight Modal Dialog</h1>
+	</header>
+	<section id="main">
+		<article>
+			<h2>Demo</h2>
+			<a class="modalTrigger button" href="#modal-1">Demo the modal dialog</a>
+			
+			<h2>General Info</h2>
+			<p>QuickModal is a jQuery plug in that creates a modal dialog from a div on the page.</p>
+			
+			<h3>Features</h3>
+			<ul>
+				<li>Multiple instances on a single page? No problem.</li>
+				<li>Customizable via plug in options and css</li>
+				<li>Lightweight (1.8kb minimized)</li>		
+			</ul>
+			
+			<h2>How To Set Up &amp; Use QuickModal</h2>
+			<ol>
+				<li>Add the plug-in script to the page, <em>after</em> you've added jQuery.
+					<pre class="code">&lt;script src="/path-to-scripts/jquery.quickModal.min.js" 
+ type="text/javascript"&gt;&lt;/script&gt;</pre>
+				</li>
+				<li>Add the modal's css to your css file, or to the page
+					<pre class="code">&lt;link href="/path-to-styles/quickModal.css" rel="stylesheet" /&gt;</pre>
+				</li>
+				<li>Call the plug in, using your selector's id or class
+					<pre class="code">$('.modalTrigger').quickModal();</pre>
+				</li>
+				<li>Set any options you want to override
+					<pre class="code">$('.modalTrigger').quickModal({ 
+    overlayColor: "navy", 
+    borderRadius: "0", 
+    modalWidth: "700" 
+});</pre>
+				</li>
+				<li>When the user clicks on your selector, the modal will quickly fade in. Clicking on the element with the closeButton class, or anywhere outside of the modal, will close the modal.</li>
+			</ol>
+			
+			<h2>Notes</h2>
+			<ul>
+				<li>The page behind the modal will not scroll while the modal is open.</li>
+				<li>The term "overlay" refers to the partial opacity background behind the modal. (You've probably already worked that out, but just in case.)</li>
+			</ul>
+		</article>
+		
+		<aside id="sidebar">
+			<h2>Options</h2>
+			<p>The plug in has lots of settings you can tweak.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Option</th>
+						<th>Default Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>closeButton</td><td>".modal-close"</td></tr>
+					<tr><td>overlayOpacity</td><td>0.5</td></tr>
+					<tr><td>overlayColor</td><td>"#000"</td></tr>
+					<tr><td>overlayZIndex</td><td>100</td></tr>
+					<tr><td>modalZIndex</td><td>1000</td></tr>					
+					<tr><td>modalWidth</td><td>"500"</td></tr>
+					<tr><td>boxShadow</td><td>"0px 0px 10px rgba(0,0,0,0.5)"</td></tr>
+					<tr><td>borderCss</td><td>"1px solid #444"</td></tr>
+					<tr><td>borderRadius</td><td>"4px"</td></tr>
+					<tr><td>modalBgColor</td><td>"#fff"</td></tr>
+					<tr><td>headerBgColor</td><td>"rgb(185, 185, 185)"</td></tr>
+					<tr><td>footerBgColor</td><td>"rgb(219, 219, 219)"</td></tr>
+				</tbody>
+			</table>
+		</aside>
+	</section>
+	
+
+
+	
+<!-- Modal dialog: uses quickModal.css file -->
+	<div id="modal-1">
+		<div class="modal-header">
+		<div class="content-header">
+			<h3 class="modal-title">SEND PAGE BY EMAIL</h3>
+			<a class="modal-close" href="#"><i class="fa fa-times"></i></a>
+		</div>
+	</div>
+		<div class="modal-body">
+		<div class="content-body">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum libero purus, convallis nec vestibulum eget, luctus vitae purus. Vestibulum non mauris et sem vulputate pellentesque ac a turpis. Ut vel lacus vitae justo vestibulum lobortis. Nunc ipsum ipsum, laoreet id dictum nec, fermentum vel purus. Maecenas nisl felis, faucibus non rutrum eu, sollicitudin sed ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent dignissim lacinia tempus. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Nulla accumsan pellentesque velit, a malesuada diam tristique a. Fusce eleifend magna erat, et imperdiet orci. Quisque sapien mauris, malesuada eu tristique pulvinar, placerat id ligula. Vivamus vitae viverra nulla. Donec eget turpis vel erat malesuada sodales.</p>
+		</div>
+	</div>
+		<div class="modal-footer">
+		<div class="content-footer">
+			<div style="float: left; width: auto;">
+				<button type="submit" class="button button-primary">
+				<i class="fa fa-bicycle"></i>Primary Button</button>
+			</div>
+			<div style="float: right; width:auto;">
+				<button type="reset" class="button modal-close"><i class="fa fa-times"></i>Cancel</button>
+			</div>
+		</div>
+	</div>
+	</div>
+ 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.quickModal.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$('.modalTrigger').quickModal();		
+		});
+	</script>
+</body>
+</html>
