@@ -2,7 +2,7 @@
 #modal-1 a 	{ color: #174597; }
 #modal-1 i	{ margin-right: 7px; }
 
-#modal-1 {
+.modal {
 	display: none; 
 	overflow: hidden;
 	}
