@@ -23,15 +23,18 @@
 		<article>
 			<h2>Demo</h2>
 			<a class="modalTrigger button" href="#modal-1">Demo the modal dialog</a>
+			<a class="modalTrigger button" href="#modal-2">Demo with no header</a>
+			<a class="modalTrigger button" href="#modal-3">Demo with body only</a>
 			
 			<h2>General Info</h2>
-			<p>QuickModal is a jQuery plug in that creates a modal dialog from a div on the page.</p>
+			<p>quickModal is a jQuery plug in that creates a modal dialog from a div on the page, using the trigger's href attribute to set which div to display.</p>
 			
 			<h3>Features</h3>
 			<ul>
-				<li>Multiple instances on a single page? No problem.</li>
-				<li>Customizable via plug in options and css</li>
-				<li>Lightweight (1.8kb minimized)</li>		
+				<li>Multiple instances on a single page</li>
+				<li>Customizable via plug in options and css.</li>
+				<li>Lightweight (1.8kb minimized)</li>
+				<li>Clicking out of the modal ara closes modal (i.e., close button optional)</li>
 			</ul>
 			
 			<h2>How To Set Up &amp; Use QuickModal</h2>
@@ -46,8 +49,8 @@
 				<li>Call the plug in, using your selector's id or class
 					<pre class="code">$('.modalTrigger').quickModal();</pre>
 				</li>
-				<li>Set any options you want to override
-					<pre class="code">$('.modalTrigger').quickModal({ 
+				<li>Set any options you want to customize
+<pre class="code">$('.modalTrigger').quickModal({ 
     overlayColor: "navy", 
     borderRadius: "0", 
     modalWidth: "700" 
@@ -95,30 +98,58 @@
 
 	
 <!-- Modal dialog: uses quickModal.css file -->
-	<div id="modal-1">
+	<div id="modal-1" class="modal">
 		<div class="modal-header">
-		<div class="content-header">
+			<div class="content-header">
 			<h3 class="modal-title">SEND PAGE BY EMAIL</h3>
 			<a class="modal-close" href="#"><i class="fa fa-times"></i></a>
 		</div>
-	</div>
+		</div>
 		<div class="modal-body">
-		<div class="content-body">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum libero purus, convallis nec vestibulum eget, luctus vitae purus. Vestibulum non mauris et sem vulputate pellentesque ac a turpis. Ut vel lacus vitae justo vestibulum lobortis. Nunc ipsum ipsum, laoreet id dictum nec, fermentum vel purus. Maecenas nisl felis, faucibus non rutrum eu, sollicitudin sed ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent dignissim lacinia tempus. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Nulla accumsan pellentesque velit, a malesuada diam tristique a. Fusce eleifend magna erat, et imperdiet orci. Quisque sapien mauris, malesuada eu tristique pulvinar, placerat id ligula. Vivamus vitae viverra nulla. Donec eget turpis vel erat malesuada sodales.</p>
+			<div class="content-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum libero purus, convallis nec vestibulum eget, luctus vitae purus. Vestibulum non mauris et sem vulputate pellentesque ac a turpis. Ut vel lacus vitae justo vestibulum lobortis. Nunc ipsum ipsum, laoreet id dictum nec, fermentum vel purus. Maecenas nisl felis, faucibus non rutrum eu, sollicitudin sed ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent dignissim lacinia tempus. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Nulla accumsan pellentesque velit, a malesuada diam tristique a. Fusce eleifend magna erat, et imperdiet orci. Quisque sapien mauris, malesuada eu tristique pulvinar, placerat id ligula. Vivamus vitae viverra nulla. Donec eget turpis vel erat malesuada sodales.</p>
+			</div>
 		</div>
-	</div>
 		<div class="modal-footer">
-		<div class="content-footer">
-			<div style="float: left; width: auto;">
-				<button type="submit" class="button button-primary">
-				<i class="fa fa-bicycle"></i>Primary Button</button>
-			</div>
-			<div style="float: right; width:auto;">
-				<button type="reset" class="button modal-close"><i class="fa fa-times"></i>Cancel</button>
+			<div class="content-footer">
+				<div style="float: left; width: auto;">
+					<button type="submit" class="button button-primary">
+					<i class="fa fa-bicycle"></i>Primary Button</button>
+				</div>
+				<div style="float: right; width:auto;">
+					<button type="reset" class="button modal-close"><i class="fa fa-times"></i>Cancel</button>
+				</div>
 			</div>
 		</div>
 	</div>
+	
+	<div id="modal-2" class="modal">
+		<div class="modal-body">
+			<div class="content-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum libero purus, convallis nec vestibulum eget, luctus vitae purus. Vestibulum non mauris et sem vulputate pellentesque ac a turpis. Ut vel lacus vitae justo vestibulum lobortis. Nunc ipsum ipsum, laoreet id dictum nec, fermentum vel purus. Maecenas nisl felis, faucibus non rutrum eu, sollicitudin sed ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent dignissim lacinia tempus. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Nulla accumsan pellentesque velit, a malesuada diam tristique a. Fusce eleifend magna erat, et imperdiet orci. Quisque sapien mauris, malesuada eu tristique pulvinar, placerat id ligula. Vivamus vitae viverra nulla. Donec eget turpis vel erat malesuada sodales.</p>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div class="content-footer">
+				<div style="float: left; width: auto;">
+					<button type="submit" class="button button-primary">
+					<i class="fa fa-bicycle"></i>Primary Button</button>
+				</div>
+				<div style="float: right; width:auto;">
+					<button type="reset" class="button modal-close"><i class="fa fa-times"></i>Cancel</button>
+				</div>
+			</div>
+		</div>
 	</div>
+
+	<div id="modal-3" class="modal">
+		<div class="modal-body">
+			<div class="content-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum libero purus, convallis nec vestibulum eget, luctus vitae purus. Vestibulum non mauris et sem vulputate pellentesque ac a turpis. Ut vel lacus vitae justo vestibulum lobortis. Nunc ipsum ipsum, laoreet id dictum nec, fermentum vel purus. Maecenas nisl felis, faucibus non rutrum eu, sollicitudin sed ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent dignissim lacinia tempus. Nulla facilisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Nulla accumsan pellentesque velit, a malesuada diam tristique a. Fusce eleifend magna erat, et imperdiet orci. Quisque sapien mauris, malesuada eu tristique pulvinar, placerat id ligula. Vivamus vitae viverra nulla. Donec eget turpis vel erat malesuada sodales.</p>
+			</div>
+		</div>
+	</div>
+
  
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.quickModal.js"></script>
